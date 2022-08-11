@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* Isso a globo não mostra */
+
+
+body {
+    background: url(_imagens/California.jpg) ;
+    background-position: 50%;
+    background-size: 150%;
+ /* background-attachment: fixed; */
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+}
+
+div {
+    padding: 8px;
+    position: relative;
+    width: 700px;
+    height: 500px;
+    background-color: rgba(95, 95, 95, 0.5);
+    margin: 145px auto 200px auto;
+    border: 1px solid rgba(209, 94, 94, 0);
+    border-radius: 4px;
+    box-shadow: 3px 3px 0.3px rgba(0,0,0,.3);
+    word-wrap: break-word;
+}
+
+p{
+
+color: rgb(128, 210, 248);
+
+}
+
+
+/* Long live House Stark */
