@@ -25,6 +25,7 @@
                         <li><a href="exercicios.php?dir=teste&file=integraHTML">Integração HTML</a></li>
                         <li><a href="exercicios.php?dir=teste&file=integraCSS">Integração CSS</a></li>
                         <li><a href="exercicios.php?dir=teste&file=cometariosPHP">Cometários PHP</a></li>
+                        <li><a href="exercicios.php?dir=teste&file=desafio">Desafio</a></li>
                     </ul>
             </div>
             <!-- 

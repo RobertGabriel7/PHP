@@ -17,7 +17,9 @@
     <h2>Visualização de Exercicios</h2>
  </header>
  <nav class="navega" >
-   <a id="a1" href="../basico/olaphp.php">SEM FORMATAÇÃO</a>
+   <a id="a1" href=<?= "{$_GET['dir']}/{$_GET['file']}.php"
+   ?>
+   >SEM FORMATAÇÃO</a>
    <a id="a2" href="./site.php" class="vermelho">Voltar</a>
  </nav>
  <main class="prin">
