@@ -20,10 +20,6 @@ $resultado1 =  $_GET["tra1"] ;
 $resultado2 =  $_GET["tra2"] ;
 
 
-
-
-
-
 if ($resultado1 == "on" && $resultado2 == "on") {
    
     echo "Opa, terás uma TV de 50 polegadas!!";
