@@ -11,7 +11,7 @@
         array(
             "Carro" => "Lamborghini", 
             "Casa" => "Jardins",
-        "Bateria" => "Odery"),
+            "Bateria" => "Odery"),
         array(),
     
     );
