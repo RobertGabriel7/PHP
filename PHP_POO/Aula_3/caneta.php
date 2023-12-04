@@ -7,15 +7,20 @@ class Caneta{
 
 #Atributos do moledo
 
-    var $modelo;
-    var $cor ;
-    var $ponta;
-    var $carga ;
-    var $caneta;
+    /*Atributo publico: todos acessam*/
+    public $modelo;
+    public $cor ;
+
+    /*Atributo privado: só eu acesso*/
+    private $ponta;
+
+    /*Atributo protegido: só minha mãe e meus filhos*/
+    protected $carga ;
+    protected $caneta;
 
 #A function é um método ou operações que um objeto pode fazer.
 
-function rabiscar (){
+public function rabiscar (){
 
 /*$this-> uma referência ao próprio objeto em que o código está sendo executado. É uma maneira de acessar propriedades (variáveis de instância) e métodos do objeto no qual o código está sendo executado.*/ 
 
@@ -31,13 +36,16 @@ echo 'Caneta tampada!';
 
 }
 
-function tampada(){
+/*Mesmo o atributo caneta estando protegido, é possível acessar atráves 
+da function (método)*/
+
+public function tampada(){
 
     $this->caneta = true;
 
 }
 
-function destampada(){
+private function destampada(){
 
     $this->caneta = false;
 
