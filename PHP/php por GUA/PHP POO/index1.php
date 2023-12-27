@@ -10,7 +10,8 @@
   <pre>
       
       <?php
-      require_once 'POO.php';
+      require_once 'pas';
+
       $op = new caneta;
       $op->modelo = 'Faber Castel Premium';
       $op->cor = 'Azul Mar';
