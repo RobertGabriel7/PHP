@@ -41,7 +41,7 @@ echo $op;
 
 echo "Passando o variavel como parametro:";
 
-function topo (&$x){
+function PorParamtro (&$x){
 
 $x += 2;
 
@@ -50,7 +50,7 @@ echo"<p>O valor de x  é: ",$x;
 }
 
 $a = 5;
-$r = topo($a);
+$r = PorParamtro($a);
 /* Agora o valor da variavel $a muda porque ela foi passada como parametro para a function */
 echo "<p>O valor de a é: ",$a;
 
@@ -58,7 +58,7 @@ echo "<p>O valor de a é: ",$a;
 
 echo "<br><br>Passando o valor da variavel como parametro:";
 
-function topo1 ($x1){
+function PorValorDaVariavel ($x1){
 
     $x1 += 2;
     
@@ -67,7 +67,7 @@ function topo1 ($x1){
     }
     /* O valor da variavel $a1 não muda porque foi passado apenas o valor para a function, e não a variavel. */
     $a1 = 5;
-    $r1 = topo1($a1);
+    $r1 = PorValorDaVariavel($a1);
     echo "<p>O valor de a é: ",$a1;
     
 
