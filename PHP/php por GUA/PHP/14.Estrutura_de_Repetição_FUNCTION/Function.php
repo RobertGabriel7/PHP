@@ -17,10 +17,6 @@ $y = 25;
 soma($x,$y)
 
 
-
-
-
-
 function soma ($a,$b){
 
 $s = $a+$b;
