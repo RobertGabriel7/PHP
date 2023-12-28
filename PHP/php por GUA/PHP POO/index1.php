@@ -17,7 +17,7 @@
       $op->cor = 'Azul Mar';
       $op->ponta = 0.5;
       $op->carga = '95%';
-      $op->tampada = true;
+      /* $op->tampada = true; */
       $op->rabiscar();
       
       $op->destampar();
@@ -27,7 +27,7 @@
       $opa->cor = 'Preto';
       $opa->ponta = 0.5;
       $opa->carga = '97%';
-      $opa->tampada = true;
+      /* $opa->tampada = true; */
       
        print_r($opa); 
 
