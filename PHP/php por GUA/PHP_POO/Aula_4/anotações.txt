@@ -1,0 +1,8 @@
+Métodos Modificadores 
+
+Getters: pega informações, com isso é possivel criar um método Get para acessar as informações de uma forma segura
+
+Setters: modificas as coisas que estão dentro do objeto(Class). Também funciona como um método, porém precisa passar (set = enviar) as informações por parâmetro
+
+$book = "Biblia"
+e.SetDocumentos($book);
