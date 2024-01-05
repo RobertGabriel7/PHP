@@ -12,14 +12,16 @@
         require_once 'caneta.php';
     /* Classe  */
     $caneta11 = new Caneta();
-    
+    $caneta11->Caneta("Bic 7","Preto",0.7);
+
+
     /* Atributos */
-    $caneta11->setPonta(0.7);
-    $caneta11->setModelo("BIC CLASSIC 7");
-    $caneta11->setCor("Azul");
+    //$caneta11->setPonta(0.7);
+    //$caneta11->setModelo("BIC CLASSIC 7");
+    //$caneta11->setCor("Azul");
     
     /* Métodos */
-    $caneta11->tampada();
+    //$caneta11->tampada();
 
     print_r($caneta11);
     

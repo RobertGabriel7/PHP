@@ -18,9 +18,12 @@ public function setModelo($m) {
 }
 
 //cor
+/* aqui vai enviar o valor para a variavel $c e a variavel cor vai receber o valor da variavel $c */
 public function setCor($c){
     $this-> cor = $c;
 }
+
+/* Aqui vai retornar o valor da variavel cor */
 public function getCor(){
     return $this->cor;
 }
@@ -45,13 +48,13 @@ public function tampada(){
 //O metodo construct cria um objeto com atributos pré definidos
 //E para criar esse metodo, pode colocar __construct ou o nome do obejto
 //Por exemplo: "Caneta"
-
+/* 
 public function __construct()
 {
     $this->ponta = 0.5;
     $this->cor = "Black";
 }
-
+ */
 /*
 
 
@@ -86,7 +89,6 @@ $this->ponta = $p;
 $this->tampada();
 
 }
-
 
 
 
