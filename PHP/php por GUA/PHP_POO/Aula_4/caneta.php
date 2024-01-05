@@ -19,7 +19,7 @@ public function setModelo($m) {
 
 //cor
 public function setCor($c){
-    $this-> ponta = $c;
+    $this-> cor = $c;
 }
 public function getCor(){
     return $this->cor;
@@ -46,7 +46,16 @@ public function tampada(){
 //E para criar esse metodo, pode colocar __construct ou o nome do obejto
 //Por exemplo: "Caneta"
 
+public function __construct()
+{
+    $this->ponta = 0.5;
+    $this->cor = "Black";
+}
+
 /*
+
+
+
 public function Caneta1()
 
 {
