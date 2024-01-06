@@ -1,5 +1,7 @@
 <?php               
 
+$tetee = $_POST["a"];
+
 class Banco7{
 
 
@@ -14,7 +16,7 @@ private $status;
 
     /* Métodos */
 
-    public function AbrirConta(){
+    public function AbrirConta($tetee){
         /* Se é conta corrente (50 reais) ou poupança (150 reais)  */
         if ($this->tipo === "CC"){
             echo "Conta Corrente solicitada e você ganhou R$ 50";

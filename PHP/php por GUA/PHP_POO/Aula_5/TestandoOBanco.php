@@ -7,11 +7,14 @@
 </head>
 <body>
 
-
-
-<label for="">Qual o tipo da Conta: Conta Corrente (CC) ou Conta Poupança (CP) ?</label>
-<input type="TipoDaConta"/ > 
-
+<form method="post" action="Banco_Seven.php">
+    
+    
+    <label for="">Qual o tipo da Conta: Conta Corrente (CC) ou Conta Poupança (CP) ?</label>
+    <input type="TipoDaConta"/ >
+    
+    <input type="submit" value="Envair">
+</form ]>
 
 
     <pre>
@@ -21,6 +24,8 @@
 require_once "Banco_Seven.php";
 
 $teste = new Banco7;
+
+
 
 echo"<br>";
 print_r($teste);
