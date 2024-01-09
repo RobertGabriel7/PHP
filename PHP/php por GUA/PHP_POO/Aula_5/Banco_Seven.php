@@ -49,9 +49,9 @@ public function fecharConta(){
 
 public function depositar($v){
     if($this->status == true){
-        $this->saldo =+ $v;
+        $this->saldo += $v;
         
-        echo "<br><hr> Saldo atual: R$ {$this->getSaldo()}. <br><hr>";
+        echo "<br><hr> Saldo atua0l: R$ {$this->getSaldo()}. <br><hr>";
 
     }else{
         echo "Conta inexistente, impossivel depositar";
@@ -61,7 +61,9 @@ public function depositar($v){
 public function sacar($v){
     if ($this-> status == true){
        if($this->saldo > 0){
-            $this->saldo -= $v;
+
+           $this->setSaldo($this->getSaldo() - $v);
+
                  echo "<br><hr> Saldo atual: R$ {$this->getSaldo()}.<br><hr>";
                
 

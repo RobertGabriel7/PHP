@@ -29,6 +29,7 @@
             border-radius: 10px;
             border-color: black;
         }
+     
     </style>
 </head>
 <body>
@@ -61,14 +62,6 @@ require_once "Banco_Seven.php";
 
 $teste = new Banco7;
 
-
-
-echo"<br>";
-print_r($teste);
-echo"<br>";
-echo "opa";
-echo"<br> <hr> <br>";
-
 /* Adicionando dados */
 
 $teste->AbrirConta("cc");
@@ -82,22 +75,13 @@ print_r($teste);
 $teste->depositar(500);
 
 print_r($teste);
-/* 
-$teste->sacar(500);
 
-print_r($teste);
+$teste->depositar(20);
 
-$teste->fecharConta();
-
-print_r($teste); */
+print_r($teste) 
 
 
-
-
-
-
-
-
+ 
 
 
 
