@@ -1,6 +1,6 @@
 <?php               
-
-$tipo = $_POST["tipo_da_conta"];
+/* 
+$tipo = $_POST["tipo_da_conta"]; */
 class Banco7{
 
 
@@ -15,17 +15,22 @@ private $status;
 
     /* Métodos */
 
-    public function AbrirConta($tipo){
+    public function AbrirConta($abriu){
         /* Se é conta corrente (50 reais) ou poupança (150 reais)  */
-        if ($this->tipo === "CC"){
-            echo "Conta Corrente solicitada e você ganhou R$ 50";
+        $this->status = true;
+        $this->tipo = strtoupper($abriu);
+
+        if ($this->tipo == "CC"){
+            echo "- Conta Corrente solicitada e você ganhou R$ 50. <br>";
             $this->saldo += 50;
+            
         }
-        elseif($this->tipo === "CP"){
-            echo "Conta Poupança solicitada e você ganhou R$ 150";
+        elseif($this->tipo == "CP"){
+            echo "- Conta Poupança solicitada e você ganhou R$ 150. <br>";
             $this->saldo = 150;
+        
         }
-        }
+    }
 
 
 
@@ -37,12 +42,15 @@ public function fecharConta(){
     }else{
         echo "Conta encerrada.";
         $this->status = false;
+        $this->tipo = " ";
     }
 }
 
 public function depositar($v){
     if($this->status == true){
-        $this->status =+ $v;
+        $this->saldo =+ $v;
+        
+        echo "<br><hr> Saldo atual: R$ {$this->getSaldo()} . <br><hr>";
 
     }else{
         echo "Conta inexistente, impossivel depositar";
@@ -50,9 +58,12 @@ public function depositar($v){
 }
 
 public function sacar($v){
-    if ($this->status == true){
+    if ($this-> status == true){
        if($this->saldo > 0){
-        $this->saldo =- $v;
+            $this->saldo -= $v;
+                 echo "<br><hr> Saldo atual: R$ {$this->getSaldo()}.<br><hr>";
+               
+
        }else{
         echo "Saldo insuficiente.";
        }
@@ -62,7 +73,24 @@ public function sacar($v){
 }
 
 public function pagamentoMensal(){
+    $valor = 0;
 
+    if($this->tipo == "CC"){
+        $valor = 12;
+    }else{
+        $valor = 20;
+    }
+
+    if($this->status = true){
+        if($this->saldo > $valor){
+            $this->saldo - $valor;
+        }else{
+            echo "Saldo insuficiente.";
+        }
+
+    }else{
+        echo "Conta inexistente.";
+    }
 }
 
     /* Método Especial */
@@ -91,7 +119,8 @@ public function getTipoDaConta(){
 }
 
 public function setTipoDaConta($oTipo){
-    $this->tipo = $oTipo;
+    
+    $this->tipo =  strtoupper($oTipo);
 }
 
 public function getDono(){
@@ -112,6 +141,5 @@ public function setSaldo($oSaldo){
 }
 
 
-echo $tipo;
 
 ?>
