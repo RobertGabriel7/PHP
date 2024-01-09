@@ -29,6 +29,10 @@
             border-radius: 10px;
             border-color: black;
         }
+        hr{
+            border-color: black;
+
+        }
      
     </style>
 </head>
@@ -69,13 +73,22 @@ require_once "Banco_Seven.php";
 $teste = new Banco7;
 $teste->AbrirConta("cc","robert");
 $teste->setNumConta(77730);
+$teste->depositar(300);
+$teste->sacar(350);
+$teste->fecharConta();
 print_r($teste);
+
+echo "<br><br>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> <br><br>";
 
  /* Conta da Elisa */
  /* Clonando a Class Banco7 */
 $teste2 = new Banco7;
 $teste2->AbrirConta("cp","elisa");
 $teste2->setNumConta(77728);
+$teste2->depositar(600);
+
+$teste2->sacar(750);
+$teste2->fecharConta();
 print_r($teste2); 
 
 

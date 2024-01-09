@@ -42,9 +42,8 @@ public function fecharConta(){
     }elseif($this->saldo < 0 ){
         echo "Conta em Débito, falta pagar a fatura.";
     }else{
-        echo "Conta encerrada.";
+        echo "Conta encerrada.<br>";
         $this->status = false;
-        $this->tipo = " ";
         $this->saldo = null;
     }
 }
@@ -62,11 +61,11 @@ public function depositar($v){
 
 public function sacar($v){
     if ($this-> status == true){
-       if($this->saldo > 0){
+       if($this->saldo > 0 && $v <= $this->saldo){
 
            $this->setSaldo($this->getSaldo() - $v);
 
-                 echo "<br><hr> Saldo atual: R$ {$this->getSaldo()}.<br><hr>";
+                 echo "<br><hr> Saldo atual após sacar $v: R$ {$this->getSaldo()}.<br><hr>";
                
 
        }else{
