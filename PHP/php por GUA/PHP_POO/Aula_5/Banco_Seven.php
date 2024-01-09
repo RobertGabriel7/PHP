@@ -23,12 +23,12 @@ private $status;
         $this->dono = ucfirst( strtolower($dono1)); /* strtolower deixa as strings minusculas */
 
         if ($this->tipo == "CC"){
-            echo "- Conta Corrente solicitada e você ganhou R$ 50. <br>";
+            echo "<hr>- Conta Corrente solicitada e você ganhou R$ 50, {$this->getDono()}.<br><hr>";
             $this->saldo += 50;
             
         }
         elseif($this->tipo == "CP"){
-            echo "- Conta Poupança solicitada e você ganhou R$ 150. <br>";
+            echo "<hr>- Conta Poupança solicitada e você ganhou R$ 150, {$this->getDono()}.<br><hr>";
             $this->saldo = 150;
         
         }
@@ -104,7 +104,8 @@ public function __construct()
 {
     $this->saldo = 0;
     $this->status = 0;
-    echo "<hr>O status da conta é $this->status e o saldo: $this->saldo. <br><hr>";
+   
+    
 }
 
 /* GETTERS E SETTERS */
