@@ -45,12 +45,20 @@ public function depositar($v){
         $this->status =+ $v;
 
     }else{
-        echo "Conta inexistente";
+        echo "Conta inexistente, impossivel depositar";
     }
 }
 
-public function sacar(){
-
+public function sacar($v){
+    if ($this->status == true){
+       if($this->saldo > 0){
+        $this->saldo =- $v;
+       }else{
+        echo "Saldo insuficiente.";
+       }
+    }else{
+        echo "Conta inexistente";
+    }
 }
 
 public function pagamentoMensal(){
