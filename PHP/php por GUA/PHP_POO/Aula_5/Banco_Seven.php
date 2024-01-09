@@ -15,10 +15,12 @@ private $status;
 
     /* Métodos */
 
-    public function AbrirConta($abriu){
+    public function AbrirConta($abriu, $dono1){
         /* Se é conta corrente (50 reais) ou poupança (150 reais)  */
         $this->status = true;
-        $this->tipo = strtoupper($abriu);
+
+        $this->tipo = strtoupper($abriu); /* A tag strtoupper deixa todos os caracteres em MAIUSCULOS */
+        $this->dono = ucfirst( strtolower($dono1)); /* strtolower deixa as strings minusculas */
 
         if ($this->tipo == "CC"){
             echo "- Conta Corrente solicitada e você ganhou R$ 50. <br>";
@@ -101,8 +103,8 @@ public function pagamentoMensal(){
 public function __construct()
 {
     $this->saldo = 0;
-    $this->status = false;
-    echo "O status da conta é $this->status e o saldo: $this->saldo";
+    $this->status = 0;
+    echo "<hr>O status da conta é $this->status e o saldo: $this->saldo. <br><hr>";
 }
 
 /* GETTERS E SETTERS */

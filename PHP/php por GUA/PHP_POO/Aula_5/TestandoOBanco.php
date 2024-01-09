@@ -60,13 +60,15 @@
 <?php
 require_once "Banco_Seven.php";
 
-$teste = new Banco7;
+
 
 /* Adicionando dados */
 
-$teste->AbrirConta("cc");
+/* Conta do Robert */
+/* Clonando a Clss Banco7 */
+$teste = new Banco7;
+$teste->AbrirConta("cc","robert");
 print_r($teste);
-
 
 $teste->sacar(20);
 
@@ -78,16 +80,17 @@ print_r($teste);
 
 $teste->depositar(20);
 
-print_r($teste) 
+print_r($teste);
 
 
- 
+ /* Conta da Elisa */
+ /* Clonando a Class Banco7 */
+$teste2 = new Banco7;
 
+print_r($teste2);
 
-
-
-
-
+$teste2->AbrirConta("cp","elisa");
+print_r($teste2);
 
 
 ?>
