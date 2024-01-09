@@ -1,7 +1,6 @@
 <?php               
 
-$tetee = $_POST["a"];
-
+$tipo = $_POST["tipo_da_conta"];
 class Banco7{
 
 
@@ -16,7 +15,7 @@ private $status;
 
     /* Métodos */
 
-    public function AbrirConta($tetee){
+    public function AbrirConta($tipo){
         /* Se é conta corrente (50 reais) ou poupança (150 reais)  */
         if ($this->tipo === "CC"){
             echo "Conta Corrente solicitada e você ganhou R$ 50";
@@ -31,11 +30,23 @@ private $status;
 
 
 public function fecharConta(){
-    
+    if($this->saldo > 0){
+        echo "Conta com dinheiro";
+    }elseif($this->saldo < 0 ){
+        echo "Conta em Débito";
+    }else{
+        echo "Conta encerrada.";
+        $this->status = false;
+    }
 }
 
-public function depositar(){
+public function depositar($v){
+    if($this->status == true){
+        $this->status =+ $v;
 
+    }else{
+        echo "Conta inexistente";
+    }
 }
 
 public function sacar(){
@@ -90,8 +101,9 @@ public function getSaldo(){
 public function setSaldo($oSaldo){
     $this->saldo = $oSaldo;
 }
-
-
-
 }
+
+
+echo $tipo;
+
 ?>
