@@ -82,8 +82,31 @@ print_r($teste);
 $teste->depositar(500);
 
 print_r($teste);
- ?>
+/* 
+$teste->sacar(500);
 
+print_r($teste);
+
+$teste->fecharConta();
+
+print_r($teste); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
     </pre>
 </body>
 </html>

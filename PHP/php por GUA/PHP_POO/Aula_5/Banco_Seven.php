@@ -36,13 +36,14 @@ private $status;
 
 public function fecharConta(){
     if($this->saldo > 0){
-        echo "Conta com dinheiro";
+        echo "<hr>Conta com R$ {$this->getSaldo()}, não pode fechar a conta com dinheiro.<br><hr>";
     }elseif($this->saldo < 0 ){
-        echo "Conta em Débito";
+        echo "Conta em Débito, falta pagar a fatura.";
     }else{
         echo "Conta encerrada.";
         $this->status = false;
         $this->tipo = " ";
+        $this->saldo = null;
     }
 }
 
@@ -50,7 +51,7 @@ public function depositar($v){
     if($this->status == true){
         $this->saldo =+ $v;
         
-        echo "<br><hr> Saldo atual: R$ {$this->getSaldo()} . <br><hr>";
+        echo "<br><hr> Saldo atual: R$ {$this->getSaldo()}. <br><hr>";
 
     }else{
         echo "Conta inexistente, impossivel depositar";
