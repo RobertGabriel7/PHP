@@ -29,8 +29,8 @@ public function __construct()
 
 public function Ligar()
 {
-    if($this->ligado == false){
-        $this->setLigado(true);
+    if($this->ligado == false){ /* Vai verificar se está ligado */
+        $this->setLigado(true); 
         $this->setTocando(false);
         /* Operador ternario if: ($this->getTocando()?"Sim":"Não") */
         echo "Tv está ligada: ",($this->getLigado()?"Sim":"Não")," <br>Está tocando: ",($this->getTocando()?"Sim":"Não"),"<br>Volume: {$this->getVolume()}";
