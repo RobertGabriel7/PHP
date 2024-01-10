@@ -13,17 +13,11 @@
 
         print_r($teste);
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    $teste->Ligar();
+    echo "<hr>";
+    $teste->MenosVolume();
+    echo "<br><hr>";
+    print_r($teste);
         
         ?>
     </pre>

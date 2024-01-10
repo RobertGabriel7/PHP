@@ -7,13 +7,23 @@ include "Recursos/Interface7.php";
 Class ControleRemoto implements Controlador{
 
 
-
 /* Atributos */
 private $volume;
 private $ligado;
 private $tocando;
 
+/* Special Method  */
+
+public function __construct()
+{
+    $this->volume = 100;
+    $this->ligado = false;
+    $this->tocando = false;
+}
+
 /* Implements */ 
+
+/* Métodos */
 
 /* estou implementando os methods que foram criados na interface para isso eu preciso sobrescrever os methods and only need to write public function e o method  */
 
@@ -39,10 +49,9 @@ public function Desligar()
 
 public function AbrirMenu()
 {
-    $this->getVolume();
-    $this->getLigado();
-    $this->getTocando();
-
+    echo "Volume da Tv: {$this->getVolume()}";
+    echo "Ligado: {$this->getLigado()}";
+    echo "Tocando: {$this->getTocando()}";
 
 }
 
@@ -53,43 +62,58 @@ public function FecharMenu()
 
 public function MaisVolume()
 {
-    if($this->volume < 100){ /* 97 */
-        $this->volume =+ 5; /* 97 + 5 = 102 */
-        $this->getVolume();
+    if($this->ligado){
+        if($this->volume < 100){ /* 97 */
+            $this->volume += 5; /* 97 + 5 = 102 */
+                $this->getVolume();
             
-            if($this->volume >100 ){ 
-                 $this->volume = 100; /* 100 */
-                    $this->getVolume();
-             }else{
-                 echo "Volume da Tv: {$this->getVolume()}";
-              }
+                     if($this->volume >=100 ){ 
+                        $this->volume = 100; /* 100 */
+                            $this->getVolume();
+                            echo "Volume maximo";
+                         }else{
+                                echo "Volume da Tv: {$this->getVolume()}";
+                              
+                            }
+        }else{
+            echo "Volume maximo";
+                $this->getVolume();
+         }
     }else{
-        echo "Volume maximo, (revisar)";
-        $this->getVolume();
-    }
+        echo "Tv is off.";
+     }
 }
 
 public function MenosVolume()
 {
-    if($this->volume > 0 ){
-        $this->setVolume($this->getVolume() - 5);
-            if($this->volume < 0 ){
-                $this->volume = 0;
-                    $this->getVolume();
-            }else{
-              echo "Volume da Tv: {$this->getVolume()}";
-            }
-    }else{
-        echo "Volume minino: {$this->getVolume()}";
-    }
-}
+    if($this->ligado){
+        if($this->volume > 0 ){ /* 0 */
+            $this->setVolume($this->getVolume() - 5); /* 0 - 5 = -5 */
+                 if($this->volume <= 0 ){ /* Se for menor que 0 */
+                    $this->volume = 0; /* vai receber 0 */
+                         $this->getVolume();
+                            echo "Volume minino: {$this->getVolume()}";
+                    }else{
+                        echo "Volume da Tv <br>{$this->getVolume()}[";
+                        for ($i=0; $i < $this->volume; $i++) { 
+                            echo "/";}
 
+                        echo "]<br>";
+                        }
+                        
+        }else{
+        echo "Volume minino: {$this->getVolume()}";
+         }
+    }else{
+    echo "Tv is off.";
+}
+}
 public function LigarMudo()
 {
     if($this->volume >0 ){
         $this->volume = 0;
     }else{
-        "Tv muda";
+       echo "Tv muda";
     }
 }
 
@@ -118,8 +142,8 @@ public function Play()
 
 public function Pause()
 {
-    if($this->ligado){
-        if($this->tocando){
+    if($this->ligado){ /* Verifica se está ligada a tv */ /* Se estiver ligada, vai prosseguir o código abaixo, se não, vai ficar que a tv esta off */
+        if($this->tocando){ /* Verifica se está tocando */ /* Se estiver tocando, a variavel tocando vai receber o valor false, para parar de tocar. Se não estiver tocando, quer dizer que a tv já está no Pause. */
             echo "Pause no Play.";
             $this->setTocando(false);
         }else{
@@ -130,23 +154,10 @@ public function Pause()
     }
 }
 
-/* Special Method  */
-
-public function __construct()
-{
-    $this->volume = 50;
-    $this->ligado = false;
-    $this->tocando = false;
-}
-
-/* Métodos */
-
-
-
 /* Métodos Especiais: Getters and Setters */
 
 private function getVolume(){
-    return $volu = $this->volume * "-";
+    return $this->volume;
 }
 private function setVolume($V){
     $this->volume = $V;
