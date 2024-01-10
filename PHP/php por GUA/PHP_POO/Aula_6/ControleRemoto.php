@@ -104,12 +104,30 @@ public function DesligarMudo()
 
 public function Play()
 {
-    
+    if($this->ligado){
+        if($this->tocando){
+            echo "Já está no Play.";
+            }else{
+                echo "Indo para o Play...";
+                $this->setTocando(true);
+                }
+    }else{
+        echo "Tv is off.";
+    }
 }
 
 public function Pause()
 {
-    
+    if($this->ligado){
+        if($this->tocando){
+            echo "Pause no Play.";
+            $this->setTocando(false);
+        }else{
+            echo "Tv is Pause.";
+        }
+    }else{
+        echo "Tv is off";
+    }
 }
 
 /* Special Method  */
