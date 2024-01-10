@@ -16,7 +16,7 @@ private $tocando;
 
 public function __construct()
 {
-    $this->volume = 100;
+    $this->volume = 95;
     $this->ligado = false;
     $this->tocando = false;
 }
@@ -31,7 +31,9 @@ public function Ligar()
 {
     if($this->ligado == false){
         $this->setLigado(true);
-        $this->setTocando(true);
+        $this->setTocando(false);
+        /* Operador ternario if: ($this->getTocando()?"Sim":"Não") */
+        echo "Tv está ligada: ",($this->getLigado()?"Sim":"Não")," <br>Está tocando: ",($this->getTocando()?"Sim":"Não"),"<br>Volume: {$this->getVolume()}";
     }else{
         echo "Tv is on";
     }
@@ -49,10 +51,12 @@ public function Desligar()
 
 public function AbrirMenu()
 {
-    echo "Volume da Tv: {$this->getVolume()}";
-    echo "Ligado: {$this->getLigado()}";
-    echo "Tocando: {$this->getTocando()}";
-
+    echo "Tv está ligada: ",($this->getLigado()?"Sim":"Não")," <br>Está tocando: ",($this->getTocando()?"Sim":"Não"),"<br>Volume: {$this->getVolume()} ";
+    echo"[0 ";
+    for ($i=0; $i < $this->getVolume(); $i++) { 
+        echo"|";
+    }
+    echo" {$this->getVolume()}]";
 }
 
 public function FecharMenu()
@@ -71,12 +75,22 @@ public function MaisVolume()
                         $this->volume = 100; /* 100 */
                             $this->getVolume();
                             echo "Volume maximo";
+                            echo" [0 ";
+    for ($i=0; $i < $this->getVolume(); $i++) { 
+        echo"|";
+    }
+    echo" {$this->getVolume()}]";
                          }else{
                                 echo "Volume da Tv: {$this->getVolume()}";
                               
                             }
         }else{
-            echo "Volume maximo";
+            echo "Volume maximo ";
+            echo"[0 ";
+    for ($i=0; $i < $this->getVolume(); $i++) { 
+        echo"|";
+    }
+    echo" {$this->getVolume()}]";
                 $this->getVolume();
          }
     }else{
