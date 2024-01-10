@@ -14,7 +14,7 @@ Interface: Lista de serviços fornecidos por um componente. É o contato com o m
 
 IMPORTANTE: Uma interface é representada parecida com uma Class, mas não tem atributos, apenas os métodos.
 
-Métodos abstratos: é aquele método que não vai ser desenvolvido na interface, só vai dizer que existe um método de abrir.  A ação é diferente mais a interface é diferente. O método abstrato é previsto mas não implementado.
+Métodos abstratos: é aquele método que não vai ser desenvolvido na interface, só vai dizer que existe um método de abrir.  A ação é diferente mas a interface é a mesma. O método abstrato é previsto mas não implementado.
 
 Todos os atributos precisam ser privado e geralmente dos os métodos são publicos
 
