@@ -1,0 +1,24 @@
+Pilares do POO (EHP):
+
+1 - Encapsulamento: Controla o acesso aos membros da Class. Encapsulamento tem o mesmo padrão
+
+Encapsular: Ocultar partes independentes da implementação, permitindo construir partes invisiveis ao mundo exterior. 
+
+Em POO, é possivel conversar com a capsula, a trocar de informações do mundo externo para interno é chamado de mensagem.
+
+"Ou seja, o apararelho não precisa saber como a reação dentro da pilha funciona, o apararelho precisa apenas da energia."
+
+Interface: Lista de serviços fornecidos por um componente. É o contato com o mundo exterior, que define o que pode ser feito com um objeto dessa class.
+
+*Encapsular não é obrigatorio, mas é uma boa prática para produzir Class mais eficientes.
+
+IMPORTANTE: Uma interface é representada parecida com uma Class, mas não tem atributos, apenas os métodos.
+
+Métodos abstratos: é aquele método que não vai ser desenvolvido na interface, só vai dizer que existe um método de abrir.  A ação é diferente mais a interface é diferente. O método abstrato é previsto mas não implementado.
+
+Todos os atributos precisam ser privado e geralmente dos os métodos são publicos
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2 - Herança: Permite que uma Class herde propriedades e métodos de outra classe.
+
+3 - Polimorfismo (varias formas): Capacidade de uma class derivada de usar métodos de your class base de maneira especializada .
