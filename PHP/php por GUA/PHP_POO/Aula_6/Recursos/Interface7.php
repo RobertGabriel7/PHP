@@ -6,7 +6,9 @@ interface Controlador {
 /* Primeira coisa é definir os métodos abstratos */
 
 /* Explicação: abstract significa que o método não vai ser desenvolvido aqui dentro desse método (ou function), mas em outro lugar /// public significa que o method vai ser public /// method is method /// and Ligar() is name of the method */
-abstract public function Ligar();
+abstract public function Ligar(){
+    
+}
 
 abstract public function Desligar();
 
