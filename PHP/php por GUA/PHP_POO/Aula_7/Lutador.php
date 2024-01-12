@@ -26,8 +26,8 @@ private $empates;
 
 
 
-public function __construct(){
-
+public function __construct($nome1,$nacionalidade1,$idade1,$altura1,$peso1, $vitorias1,$derrotas1,$empates1){
+    
 }
 
 
@@ -52,8 +52,12 @@ public function apresentar(){
 
 }
 
-public function status(){
-    
+public function status(){ 
+    $this->getNome();
+    echo "É peso: {$this->getCategoria()}";
+    echo $this->getVitorias(), " Vitórias.";
+    echo $this->getDerrotas(), " Derrotas.";
+    echo $this->getEmpates(), " Empates.";
 }
 
 public function ganharLuta(){
@@ -103,7 +107,6 @@ public function getPeso(){
 }
 public function setPeso($p){
     $this->peso = $p;
-
         $this->getCategoria();
         
 }
