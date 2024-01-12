@@ -89,7 +89,7 @@ public function setNacionalidade($na){
 public function getIdade(){
     return $this->idade;
 }
-public function SetIdade($ida){
+public function setIdade($ida){
     $this->idade = $ida;
 }
 public function getAltura(){
@@ -103,13 +103,20 @@ public function getPeso(){
 }
 public function setPeso($p){
     $this->peso = $p;
+        $this->getCategoria();
 }
 public function getCategoria(){
     return $this->categoria;
+    if($this->peso < 52.2){
+        $this->categoria = "Peso invalido";
+    }elseif ($this->peso < 70.3){
+        $this->categoria = "Peso leve";
+    }
 }
+ 
 public function setCategoria($c){
     $this->categoria = $c;
-}
+} 
 public function getVitorias(){
     return $this->vitorias;
 }
