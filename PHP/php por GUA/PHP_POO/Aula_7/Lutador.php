@@ -1,6 +1,7 @@
 <?php 
 
 
+include "../Aula_7/Recursos/MethodDosLutadores.php";
 
 
 /* Abstração: é abstrair somente o que importa num determinado exercicio  */
