@@ -1,5 +1,8 @@
 <?php 
 
+
+
+
 /* Abstração: é abstrair somente o que importa num determinado exercicio  */
 
 Class Lutador{
