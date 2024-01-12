@@ -6,7 +6,7 @@ include "../Aula_7/Recursos/MethodDosLutadores.php";
 
 /* Abstração: é abstrair somente o que importa num determinado exercicio  */
 
-Class Lutador{
+Class Lutador implements MethodLutadores {
 
 /* Atributos */
 /* Primeiro pilar da POO: Encapsulamento que é não deixar que ninguem mexa nos atributos */
@@ -53,10 +53,10 @@ public function apresentar(){
 }
 
 public function status(){
-
+    
 }
 
-public function ganharLutar(){
+public function ganharLuta(){
 
 }
 
