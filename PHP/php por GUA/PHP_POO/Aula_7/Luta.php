@@ -18,7 +18,7 @@
         $lutadores[2] = new Lutador("Aranha","BRA",27,1.80,80,11,5,4);
         $lutadores[3] = new Lutador("Luva de pedreiro","BRA",21,1.76,60,10,2,0);
 
-        print_r($lutadores);
+        /* print_r($lutadores); */
         echo "<hr>";
         print_r($lutadores[0]->apresentar());
 
