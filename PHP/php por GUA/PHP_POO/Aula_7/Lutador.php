@@ -63,7 +63,7 @@ public function apresentar(){
 public function status(){ 
     echo "Status do Lutador: <br>";
     echo "---- {$this->getNome()} ---- <br>";
-    echo "{$this->getCategoria()}<br>";
+    echo "{$this->getCategoria()}.<br>";
     echo $this->getVitorias(), " Vitórias. <br>";
     echo $this->getDerrotas(), " Derrotas.<br>";
     echo $this->getEmpates(), " Empates.<br>";
