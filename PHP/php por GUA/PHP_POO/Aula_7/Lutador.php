@@ -61,11 +61,12 @@ public function apresentar(){
 }
 
 public function status(){ 
-    $this->getNome();
-    echo "É peso: {$this->getCategoria()}";
-    echo $this->getVitorias(), " Vitórias.";
-    echo $this->getDerrotas(), " Derrotas.";
-    echo $this->getEmpates(), " Empates.";
+    echo "Status do Lutador: <br>";
+    echo "---- {$this->getNome()} ---- <br>";
+    echo "{$this->getCategoria()}<br>";
+    echo $this->getVitorias(), " Vitórias. <br>";
+    echo $this->getDerrotas(), " Derrotas.<br>";
+    echo $this->getEmpates(), " Empates.<br>";
 }
 
 public function ganharLuta(){
@@ -120,21 +121,20 @@ public function setPeso($p){
 }
 public function getCategoria(){
     
-     
     /* Nesse caso, como tem outra condição ( elseif ) alem de 52.2, o php entende que se passar da outra condição que é 70.3, vai dar ""true"". Então com a proxima condição funciona assim: if ($x > 52.2  && $x < 70.2) { "" Vai dar True "" } */
     if($this->peso < 52.2){
-        $c = "Peso invalido";
+        $c1 = "Peso invalido";
     }elseif ($this->peso < 70.3){
-        $c = "Peso leve";
+        $c1 = "Peso leve";
     }elseif ($this->peso < 83.9){
-        $c = "Peso médio";
+        $c1 = "Peso médio";
         /* Aqui nessa ultima condição ( elseif ) não tem mais condições alem dessa ultima, então o php entende que if ( peso < 120.2 ) vai dar true, else vai dar false */
     }elseif ($this->peso < 120.2){
-        $c = "Peso pesado.";
+        $c1 = "Peso pesado.";
     }else{
         echo "Peso invalido.";
     }
-    $this->categoria = $c;
+    $this->setCategoria($c1);
     return $this->categoria;
 }
  

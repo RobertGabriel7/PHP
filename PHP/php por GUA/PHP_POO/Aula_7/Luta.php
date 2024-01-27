@@ -21,6 +21,8 @@
         /* print_r($lutadores); */
         echo "<hr>";
         print_r($lutadores[0]->apresentar());
+        echo "<br>";
+        print_r($lutadores[0]->status());
 
 /* 
         $fight[1] = new Lutador;
