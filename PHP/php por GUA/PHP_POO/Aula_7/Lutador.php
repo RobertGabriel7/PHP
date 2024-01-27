@@ -27,7 +27,7 @@ private $empates;
 
 
 public function __construct($nome1,$nacionalidade1,$idade1,$altura1,$peso1, $vitorias1,$derrotas1,$empates1){
-    
+    $this->setNome($nome1);
 }
 
 
@@ -37,8 +37,8 @@ public function __construct($nome1,$nacionalidade1,$idade1,$altura1,$peso1, $vit
 
 
 public function apresentar(){
-    echo "Com vocês.... <br>";
-    echo " {$this->getNome()}<br>";
+    echo "Com vocês.... ";
+    echo "<br>---- {$this->getNome()} ----<br>";
     echo "Nacionalidade: {$this->getNacionalidade()}<br>";
     echo "Idade: {$this->getIdade()}<br>";
     echo "Altura: {$this->getAltura()}<br>";
