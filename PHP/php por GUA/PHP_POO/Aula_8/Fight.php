@@ -21,6 +21,7 @@ private $lutaAprovada;
 /* A class b TEM UM atributo da class a  */
 public function marcarLuta($lutador1, $lutador2){
     if ($lutador1->getCategoria() == $lutador2->getCategoria() && $lutador1 != $lutador2) {
+        echo "Luta marcada!";
         $this->lutaAprovada = true;
         $this->desafiado = $lutador1;
         $this->desafiante = $lutador2;
@@ -34,24 +35,33 @@ public function marcarLuta($lutador1, $lutador2){
 
 public function lutar(){
     if($this->lutaAprovada){
+
+/* O que está acontecendo aqui? */
+/* Estou acessando as variaveis que estão privadas nesse escopo e por meio dessas variaveis, estou acessando o metodo apresentar() que está em outra Class. Essa Class está localizada em outro endereço dessa Class atual, por isso, coloquei um require_once. */
+
         $this->desafiado->apresentar();
+
+/* Mesmo o VS Code não mostrando sugestões dos metodos que estão em outra Class, funciona, por incrivel que pareça.  */
+
         $this->desafiante->apresentar();
         $vencedor = rand(0,2);
 
         switch ($vencedor) {
             case 0:
-                echo "Empatou";
+                echo "<hr>Empatou!";
                 $this->desafiado->empatarLuta();
                 $this->desafiante->empatarLuta();
+
                 break;
             case 1;
-                echo "Desafiado ganhou!";
+                echo "<hr> {$this->desafiado->getNome()} ganhou!";
                 $this->desafiado->ganharLuta();
                 $this->desafiante->perderLuta();
+                $this->desafiado->apresentar();     
                 break;
             
             case 2;
-            echo "Desafiante ganhou!";
+            echo "<hr>{$this->desafiante->getNome()} ganhou!";
             $this->desafiado->perderLuta();
             $this->desafiante->ganharLuta();
 

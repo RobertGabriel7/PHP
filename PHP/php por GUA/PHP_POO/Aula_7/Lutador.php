@@ -45,7 +45,7 @@ public function __construct($nome1,$nacionalidade1,$idade1,$altura1,$peso1, $vit
 
 
 public function apresentar(){
-    echo "Com vocês.... ";
+    echo "<hr>Com vocês.... ";
     echo "<br>---- <strong>{$this->getNome()}</strong> ----<br>";
     echo "Nacionalidade: <strong>{$this->getNacionalidade()}</strong><br>";
     echo "Idade: <strong>{$this->getIdade()}</strong><br>";
@@ -80,7 +80,6 @@ public function perderLuta(){
 public function empatarLuta(){
     $this->setEmpates($this->getEmpates() + 1);
 }
-
 
 
 /* GETTERS and SETTERS */
