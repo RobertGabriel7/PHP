@@ -1,0 +1,10 @@
+Uma casa está para uma planta arquitônica assim como um objeto está para uma CLASSE
+
+"A class pode ser a planta de uma casa e a casa o objeto."
+
+COMERN = Confiavel, Oportuno, Manutenivel, Extensivel, Reutilizavel, Natural.
+
+*Um objeto é uma construção de software que encapsula estado e comportamento.*
+*Linguagem POO pura é o Java que é totalmente em POO. Já o PHP é baseado em POO.*
+
+EHP = Encapsulamento, Herança e polimorfismo.

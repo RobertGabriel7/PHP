@@ -57,14 +57,16 @@ public function lutar(){
                 echo "<hr> {$this->desafiado->getNome()} ganhou!";
                 $this->desafiado->ganharLuta();
                 $this->desafiante->perderLuta();
-                $this->desafiado->apresentar();     
+                $this->desafiado->status();
+                $this->desafiante->status();     
                 break;
             
             case 2;
             echo "<hr>{$this->desafiante->getNome()} ganhou!";
             $this->desafiado->perderLuta();
             $this->desafiante->ganharLuta();
-
+            $this->desafiante->status();
+            $this->desafiado->status();
                 break;
             default:
                 echo "deu erro";
@@ -72,7 +74,7 @@ public function lutar(){
         }
 
     }else{
-        echo "A luta não pode acontecer";
+        echo "<br>A luta não pode acontecer";
     }
 }
 

@@ -15,9 +15,7 @@ $lutadores[3] = new Lutador("Luva de pedreiro","BRA",21,1.76,60,10,2,0);
 
 $lutas = new Luta;
 
-$lutas->marcarLuta($lutadores[0],$lutadores[1]);
-
-echo "<hr>Teste para lutarem.";
+$lutas->marcarLuta($lutadores[0],$lutadores[0]);
 
 $lutas->lutar();
      
