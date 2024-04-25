@@ -158,23 +158,6 @@ public function getEmpates(){
 public function setEmpates($e){
     $this->empates = $e;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 ?>
