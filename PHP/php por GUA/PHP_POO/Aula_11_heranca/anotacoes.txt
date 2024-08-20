@@ -1,0 +1,51 @@
+É possivel criar uma arvore de herança.
+
+Toda class abaixo de uma class é chamado de "subclass" e a class acima desta é chamada de "superClass".
+
+E toda subclass herda todas as caracteristicas da superClass.
+
+Quando existe uma Class que não é subclass de outra class, ela é chamada de "Raiz". Sim, em POO a arvore é de ponta cabeça.
+
+As demais class serão chamadas de folhas.
+
+Descendentes: abaixo da mãe.
+
+Ancestral: abaixo de netos.
+
+Especialização: Quando eu percorro uma arvore de cima para baixo.
+
+Generalização: Quando eu percorro uma arove de baixo para cima.
+
+
+Tudo isso acima são nomenclatura utilizados em arvores hierarquecas.
+
+
+- Tipos de Herança
+
+Tipo 1 - herança de implementação: 
+
+    é basicamente para implementar uma Class abstrata. 
+    é quando eu pego algumas coisas da class mae e implemente algo nela. 
+
+Tipo 2 - herança para diferença: 
+
+
+
+Quando uma class não vai implementar nenhum metodo, ela é chamada de "herança poor"
+
+É possivel sobreescrever metodos.
+
+
+
+---
+
+
+Abstrato e Final
+
+Class abstrata: não poder ser instanciada. só pode servir como progenitora (mãe).
+
+Metodo abstrato: Declarado, mas não implementado na progenitora (máe).
+
+Class final: Não pode ser herdada por outra classe. Obrigatoriamente folha, ou seja, ela não pode ter filhos, não poder ter herança.
+
+Metodo final: Não pode ser sobreescrito pelas suas subs-classes. Obrigatoriamente herdado.
