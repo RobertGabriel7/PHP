@@ -1,0 +1,10 @@
+Herança em POO é quando uma Class herda algumas caracteristicas e comportamentos da Class mae.
+
+Herança é util quando eu preciso criar uma outra class semelhante a uma class existente, assim eu não preciso criar do zero, mas pego algumas caracteristicas e comportamentos da class já existente.
+
+
+"class Funcionario extends Pessoa"
+
+Class Pessoa é a class mae, superClass, progenitora.
+
+Funcionario é uma subclass da class Pessoa.
